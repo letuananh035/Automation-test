@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 
 import io.appium.java_client.MobileElement;
 
-public class ViewAccount extends SettupLogin {
+public class ViewAccountTest extends SettupLogin {
 
     @Test
     public void test(){

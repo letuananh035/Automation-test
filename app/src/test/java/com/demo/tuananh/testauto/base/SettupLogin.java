@@ -28,6 +28,7 @@ public class SettupLogin extends  SettupTest {
         driver.hideKeyboard();
         MobileElement el7 = (MobileElement) driver.findElementById("com.huunghia.hoangdang.diemdanh:id/login_button");
         el7.click();
+        findElementOrNull(By.id("navigation open"));
     }
 
     private void logoutTest(){

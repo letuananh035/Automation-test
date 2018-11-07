@@ -10,7 +10,7 @@ import org.openqa.selenium.By;
 public class LoginTest extends SettupLogin {
 
     @Test
-    public void noneWorking(){
+    public void test(){
 
     }
 

@@ -39,6 +39,12 @@ public class SettupTest {
         driver.quit();
     }
 
+
+    /**
+     * Chờ UI xuất hiện, đùng khi mỏ sang màn hình mới đợi id nào đó tồn tại
+     * @param by
+     * @return
+     */
     protected MobileElement findElementOrNull(By by) {
         try {
             waitUntil(ExpectedConditions.visibilityOfElementLocated(by), 10);
@@ -48,7 +54,35 @@ public class SettupTest {
         }
     }
 
+    /**
+     * Chờ id hiển thị và đóng
+     * @param id
+     */
+    protected void waittingIdShowAndHide(String id){
+        findElementOrNull(By.id(id));
+        findElementNull(By.id(id));
+    }
+
+    /**
+     * Chờ UI Null(tắt UI)
+     * @param by
+     * @return
+     */
+    protected Boolean findElementNull(By by) {
+        try {
+            waitUntilInvisible(ExpectedConditions.invisibilityOfElementLocated(by), 10);
+            return true;
+        } catch (TimeoutException ex) {
+            return false;
+        }
+    }
+
     private void waitUntil(Function<WebDriver, WebElement> isTrue, int timeoutSeconds) throws TimeoutException {
+        WebDriverWait wait = new WebDriverWait(driver, timeoutSeconds);
+        wait.until(isTrue);
+    }
+
+    private void waitUntilInvisible(Function<WebDriver, Boolean> isTrue, int timeoutSeconds) throws TimeoutException {
         WebDriverWait wait = new WebDriverWait(driver, timeoutSeconds);
         wait.until(isTrue);
     }

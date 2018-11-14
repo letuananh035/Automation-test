@@ -20,8 +20,10 @@ public class SettupLogin extends  SettupTest {
     }
 
     private void loginTest() {
-        MobileElement el5 = (MobileElement) driver.findElementById("com.huunghia.hoangdang.diemdanh:id/login_button");
-        el5.clear();
+        MobileElement el5 = (MobileElement) driver.findElementById("com.huunghia.hoangdang.diemdanh:id/email_editText");
+        if(!el5.getText().equals("")){
+            el5.clear();
+        }
         el5.sendKeys("1651006");
         MobileElement el6 = (MobileElement) driver.findElementById("com.huunghia.hoangdang.diemdanh:id/password_editText");
         el6.sendKeys("123456");

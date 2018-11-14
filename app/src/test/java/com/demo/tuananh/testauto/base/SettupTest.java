@@ -60,7 +60,9 @@ public class SettupTest {
      */
     protected void waittingIdShowAndHide(String id){
         findElementOrNull(By.id(id));
-        findElementNull(By.id(id));
+        while( !findElementNull(By.id(id))){
+
+        }
     }
 
     /**
@@ -70,7 +72,7 @@ public class SettupTest {
      */
     protected Boolean findElementNull(By by) {
         try {
-            waitUntilInvisible(ExpectedConditions.invisibilityOfElementLocated(by), 10);
+            waitUntilInvisible(ExpectedConditions.invisibilityOfElementLocated(by), 100);
             return true;
         } catch (TimeoutException ex) {
             return false;

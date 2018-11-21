@@ -30,7 +30,6 @@ public class AbsenceRequestTest extends SettupLogin {
         driver.navigate().back();
         MobileElement el8 = (MobileElement) driver.findElementById("com.huunghia.hoangdang.diemdanh:id/send_ar_button");
         el8.click();
-
         waittingIdShowAndHide("android:id/body");
     }
 

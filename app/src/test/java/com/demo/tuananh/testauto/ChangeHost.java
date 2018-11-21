@@ -15,7 +15,7 @@ public class ChangeHost extends SettupTest{
     public void test(){
         MobileElement el2 = (MobileElement) driver.findElementById("com.huunghia.hoangdang.diemdanh:id/setting_host");
         el2.click();
-        MobileElement el3 = (MobileElement) driver.findElementById("com.huunghia.hoangdang.diemdanh:id/editText_inputhost");
+        MobileElement el3 = findElementOrNull(By.id("com.huunghia.hoangdang.diemdanh:id/editText_inputhost"));
         el3.sendKeys("http://api-andoroid.test.com/");
         MobileElement el4 = (MobileElement) driver.findElementById("com.huunghia.hoangdang.diemdanh:id/button_changehostbyhand");
         el4.click();

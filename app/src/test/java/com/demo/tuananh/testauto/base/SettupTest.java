@@ -28,6 +28,7 @@ public class SettupTest {
         desiredCapabilities.setCapability("deviceName", "Mi Mix 2");
         desiredCapabilities.setCapability("noReset", true);
         desiredCapabilities.setCapability("app", "C:\\Users\\Tuan Anh\\Desktop\\app-debug.apk");
+        desiredCapabilities.setCapability("automationName", "UiAutomator2");
 
         URL remoteUrl = new URL("http://localhost:4723/wd/hub");
 
@@ -47,7 +48,7 @@ public class SettupTest {
      */
     protected MobileElement findElementOrNull(By by) {
         try {
-            waitUntil(ExpectedConditions.visibilityOfElementLocated(by), 10);
+            waitUntil(ExpectedConditions.visibilityOfElementLocated(by), 20);
             return (MobileElement) driver.findElement(by);
         } catch (TimeoutException ex) {
             return null;

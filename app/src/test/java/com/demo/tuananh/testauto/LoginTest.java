@@ -20,7 +20,7 @@ public class LoginTest extends SettupTest {
         el5.sendKeys("1651006");
         MobileElement el6 = (MobileElement) driver.findElementById("com.huunghia.hoangdang.diemdanh:id/password_editText");
         el6.sendKeys("");
-        driver.hideKeyboard();
+        //driver.hideKeyboard();
         MobileElement el7 = (MobileElement) driver.findElementById("com.huunghia.hoangdang.diemdanh:id/login_button");
         el7.click();
         findElementNull(By.id("navigation open"));

@@ -27,16 +27,17 @@ public class SettupLogin extends  SettupTest {
         el5.sendKeys("1651006");
         MobileElement el6 = (MobileElement) driver.findElementById("com.huunghia.hoangdang.diemdanh:id/password_editText");
         el6.sendKeys("123456");
-        driver.hideKeyboard();
+        //driver.hideKeyboard();
         MobileElement el7 = (MobileElement) driver.findElementById("com.huunghia.hoangdang.diemdanh:id/login_button");
         el7.click();
-        findElementOrNull(By.id("navigation open"));
+        findElementOrNull(By.id("com.huunghia.hoangdang.diemdanh:id/use_checklist_button"));
     }
 
     private void logoutTest(){
-        MobileElement el3 = findElementOrNull(By.id("navigation open"));
+        MobileElement el3 = findElementOrNull(By.xpath("//android.widget.ImageButton[@content-desc=\"navigation open\"]"));
         el3.click();
-        MobileElement el4 = (MobileElement) driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.FrameLayout/android.support.v7.widget.RecyclerView/android.support.v7.widget.LinearLayoutCompat[9]/android.widget.CheckedTextView");
+        MobileElement el4 = findElementOrNull(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.FrameLayout/android.support.v7.widget.RecyclerView/android.support.v7.widget.LinearLayoutCompat[9]/android.widget.CheckedTextView"));
         el4.click();
+        findElementNull(By.id("com.huunghia.hoangdang.diemdanh:id/use_checklist_button"));
     }
 }

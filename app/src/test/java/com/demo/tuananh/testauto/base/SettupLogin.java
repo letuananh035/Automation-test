@@ -1,5 +1,6 @@
 package com.demo.tuananh.testauto.base;
 
+import org.apache.tools.ant.taskdefs.Sleep;
 import org.openqa.selenium.By;
 import java.net.MalformedURLException;
 
@@ -34,6 +35,7 @@ public class SettupLogin extends  SettupTest {
     }
 
     private void logoutTest(){
+        new Sleep().doSleep(1000);
         MobileElement el3 = findElementOrNull(By.xpath("//android.widget.ImageButton[@content-desc=\"navigation open\"]"));
         el3.click();
         MobileElement el4 = findElementOrNull(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.FrameLayout/android.support.v7.widget.RecyclerView/android.support.v7.widget.LinearLayoutCompat[9]/android.widget.CheckedTextView"));

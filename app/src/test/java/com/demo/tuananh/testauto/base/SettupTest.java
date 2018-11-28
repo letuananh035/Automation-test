@@ -32,7 +32,7 @@ public class SettupTest {
 
         URL remoteUrl = new URL("http://localhost:4723/wd/hub");
 
-        driver = new AndroidDriver(remoteUrl, desiredCapabilities);
+            driver = new AndroidDriver(remoteUrl, desiredCapabilities);
     }
 
     @After

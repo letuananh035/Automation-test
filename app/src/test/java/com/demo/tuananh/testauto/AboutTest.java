@@ -2,6 +2,7 @@ package com.demo.tuananh.testauto;
 
 import com.demo.tuananh.testauto.base.SettupLogin;
 
+import org.apache.tools.ant.taskdefs.Sleep;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
@@ -28,6 +29,7 @@ public class AboutTest extends SettupLogin {
         el5.click();
         findElementOrNull(By.id("android:id/button_once"));
         (new TouchAction(driver)).tap(PointOption.point(648, 635)).perform();
+        new Sleep().doSleep(500);
         MobileElement el6 = (MobileElement) driver.findElementByAccessibilityId("Navigate up");
         el6.click();
     }

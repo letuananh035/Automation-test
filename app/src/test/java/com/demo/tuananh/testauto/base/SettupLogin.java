@@ -34,7 +34,7 @@ public class SettupLogin extends  SettupTest {
         findElementOrNull(By.id("com.huunghia.hoangdang.diemdanh:id/use_checklist_button"));
     }
 
-    private void logoutTest(){
+    protected void logoutTest(){
         new Sleep().doSleep(1000);
         MobileElement el3 = findElementOrNull(By.xpath("//android.widget.ImageButton[@content-desc=\"navigation open\"]"));
         el3.click();

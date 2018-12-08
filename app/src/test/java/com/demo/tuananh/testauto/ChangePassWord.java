@@ -2,6 +2,7 @@ package com.demo.tuananh.testauto;
 
 import com.demo.tuananh.testauto.base.SettupLogin;
 
+import org.apache.tools.ant.taskdefs.Sleep;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
@@ -24,7 +25,7 @@ public class ChangePassWord extends SettupLogin {
         el3.sendKeys("123");
         MobileElement el4 = (MobileElement) driver.findElementById("android:id/button1");
         el4.click();
-        waittingIdShowAndHide("android:id/body");
+        new Sleep().doSleep(3000);
         MobileElement el5 = findElementOrNull(By.id("android:id/button2"));
         el5.click();
         MobileElement el6 = findElementOrNull(By.id("com.huunghia.hoangdang.diemdanh:id/btn_changePassword"));
@@ -37,7 +38,7 @@ public class ChangePassWord extends SettupLogin {
         el9.click();
         MobileElement el10 = (MobileElement) driver.findElementById("android:id/button1");
         el10.click();
-        waittingIdShowAndHide("android:id/body");
+        new Sleep().doSleep(3000);
         MobileElement el11 = findElementOrNull(By.id("com.huunghia.hoangdang.diemdanh:id/btn_changePassword"));
         el11.click();
         MobileElement el12 = findElementOrNull(By.id("com.huunghia.hoangdang.diemdanh:id/current_password_editText"));

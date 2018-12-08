@@ -2,6 +2,7 @@ package com.demo.tuananh.testauto;
 
 import com.demo.tuananh.testauto.base.SettupLogin;
 
+import org.apache.tools.ant.taskdefs.Sleep;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
@@ -21,11 +22,12 @@ public class AbsenceRequestHistoryTest extends SettupLogin {
         el3.click();
         MobileElement el4 = findElementOrNull(By.id("com.huunghia.hoangdang.diemdanh:id/title"));
         el4.click();
-        findElementNull(By.id("android:id/body"));
+        new Sleep().doSleep(2000);
         (new TouchAction(driver)).tap(PointOption.point(433, 290)).perform();
-        findElementOrNull(By.id("android:id/button2"));
+        new Sleep().doSleep(500);
         MobileElement el6 = (MobileElement) driver.findElementById("android:id/button2");
         el6.click();
+        new Sleep().doSleep(500);
         MobileElement el7 = (MobileElement) driver.findElementByAccessibilityId("Navigate up");
         el7.click();
     }
